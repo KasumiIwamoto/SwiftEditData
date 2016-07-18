@@ -32,6 +32,7 @@ class ListViewController: UIViewController,UITableViewDataSource,UITableViewDele
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let storyboard = UIStoryboard(name:"Main",bundle:nil)
         let controller: SelectViewController = storyboard.instantiateViewControllerWithIdentifier("SelectViewController") as! SelectViewController
+         controller.path = paths[indexPath.row]
         self.presentViewController(controller, animated: true, completion: nil)
     }
     
